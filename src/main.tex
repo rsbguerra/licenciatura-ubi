@@ -1,0 +1,54 @@
+\documentclass[12pt,a4paper]{memoir}
+\input{preamble}
+\begin{document}
+
+\include{capa}
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+\frontmatter
+
+\include{agradecimentos}
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+\tableofcontents
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+\listoffigures
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+\listoftables
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+\input{../chap/acro}
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+\mainmatter
+\acresetall
+
+\input{../chap/intro}
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+\input{../chap/state-of-art}
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+\input{../chap/tecno-ferr}
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+\input{../chap/implementacao}
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+\input{../chap/testes-res}
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+\input{../chap/conc}
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+
+% SE EXISTIREM APENDICES, DESCOMENTAR O QUE ESTÁ EM BAIXO
+% \appendix
+% \include{apendice}
+% \clearpage{\pagestyle{empty}\cleardoublepage}
+% \backmatter
+
+\bibliography{../bibtex/bibliography}
+\bibliographystyle{IEEEtran}
+
+\end{document}

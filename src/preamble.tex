@@ -1,0 +1,110 @@
+% substituir linha seguinte por 
+% \usepackage[english]{babel} 
+% se o relatório for escrito na língua inglesa.
+\usepackage{siunitx}
+\usepackage[portuguese]{babel}
+\usepackage{lipsum}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage{textcomp}
+\usepackage{makeidx}
+\usepackage{xspace}
+\usepackage{graphicx,color,times}
+\usepackage{fancyhdr}
+
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage[printonlyused]{acronym}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{tocbibind}
+\usepackage{cite}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\usepackage{dirtree}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{minted}
+
+\newcolumntype{x}[1]{%
+>{\centering}p{#1}}%
+
+% \usepackage[sorting=none]{biblatex}
+
+% \usepackage{glossaries}
+% \makeglossaries
+
+% \renewcommand{\ttdefault}{phv}
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+\fancyhf{} \fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\setlength{\headheight}{15.6pt}
+\setlength{\marginparsep}{0cm}
+\setlength{\marginparwidth}{0cm}
+\setlength{\marginparpush}{0cm}
+\addtolength{\hoffset}{-1.0cm}
+\addtolength{\oddsidemargin}{\evensidemargin}
+\addtolength{\oddsidemargin}{0.5cm}
+\addtolength{\evensidemargin}{-0.5cm}
+
+
+\usepackage{fix-cm}
+\usepackage{fourier}
+\usepackage[scaled=.92]{helvet}
+\definecolor{ChapGrey}{rgb}{0.6,0.6,0.6}
+\newcommand{\LargeFont}{
+  \usefont{\encodingdefault}{\rmdefault}{b}{n}
+  \fontsize{60}{80}\selectfont\color{ChapGrey}
+  }
+\makeatletter
+\makechapterstyle{GreyNum}{
+  \renewcommand{\chapnamefont}{\large\sffamily\bfseries\itshape}
+  \renewcommand{\chapnumfont}{\LargeFont}
+  \renewcommand{\chaptitlefont}{\Huge\sffamily\bfseries\itshape}
+  \setlength{\beforechapskip}{0pt}
+  \setlength{\midchapskip}{40pt}
+  \setlength{\afterchapskip}{60pt}
+  \renewcommand\chapterheadstart{\vspace*{\beforechapskip}}
+  \renewcommand\printchaptername{
+  \begin{tabular}{@{}c@{}}
+    \chapnamefont \@chapapp\\}
+    \renewcommand\chapternamenum{\noalign{\vskip 2ex}}
+    \renewcommand\printchapternum{\chapnumfont\thechapter\par}
+    \renewcommand\afterchapternum{
+  \end{tabular}
+  \par\nobreak\vskip\midchapskip}
+  \renewcommand\printchapternonum{}
+  \renewcommand\printchaptertitle[1]{
+  {\chaptitlefont{##1}\par}}
+  \renewcommand\afterchaptertitle{\par\nobreak\vskip \afterchapskip}
+}
+
+\makeatother
+\chapterstyle{GreyNum}
+
+\setcounter{tocdepth}{3}
+\setsecnumdepth{subsubsection}
+
+\renewcommand{\ttdefault}{lmtt}
+\renewcommand{\lstlistingname}{Excerto de Código}
+\renewcommand{\lstlistlistingname}{Lista de Excertos de Código}
+
+\renewcommand{\today}{\day \ifcase \month \or Janeiro\or Fevereiro\or Março\or %
+Abril\or Maio\or Junho\or Julho\or Agosto\or Setembro\or Outubro\or Novembro\or Dezembro\fi de \number \year} 
+
+% Set the graphics path
+\graphicspath{{../img/}}
